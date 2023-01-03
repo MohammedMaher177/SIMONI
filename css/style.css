@@ -2,7 +2,6 @@
   margin: 0;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
-  /* background-color: #111418; */
 }
 a {
   text-decoration: none;
@@ -96,10 +95,11 @@ header nav ul a:hover {
 /*H O M E   =====    S T A R T*/
 .home {
   background-image: url(../images/intro-bg.jpg);
+  background-attachment: fixed;
   background-size: cover;
   background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: scroll;
+  /* background-repeat: no-repeat; */
+  /* background-attachment: scroll; */
   height: 100vh;
   position: relative;
   color: white;
@@ -397,7 +397,7 @@ header nav ul a:hover {
 }
 /*===========================================================*/
 .portfolio {
-  /* height: 150vh; */
+  height: 150vh;
 }
 
 .portfolio ul li a {
@@ -441,7 +441,7 @@ img {
   width: 100%;
   border-radius: 0.25rem;
 }
-.portfolio .imag:hover .text {
+.portfolio .imag:hover  .text {
   display: flex;
 }
 .portfolio .imag:hover img {
@@ -459,10 +459,42 @@ img {
   cursor: pointer;
   z-index: 3;
 }
+.photo1 {
+  left: 0;
+  top: 0;
+}
+.photo2 {
+  left: 440px;
+  top: 0;
+}
+.photo3 {
+  left: 880px;
+  top: 0;
+}
+.photo4 {
+  left: 0px;
+  top: 301.156px;
+}
+.photo5 {
+  left: 880px;
+  top: 301.156px;
+}
+.photo6 {
+  left: 880px;
+  top: 602.312px;
+}
+.photo7 {
+  left: 440px;
+  top: 718.719px;
+}
 @media screen and (max-width: 992px) {
   .portfolio-img {
-    display: fixed;
+    position: static !important;
+    width: 80%;
     margin: auto;
+    left: 0;
+    padding: 2rem;
+    margin-bottom: 2rem;
   }
   img {
     width: 100%;
@@ -470,4 +502,11 @@ img {
   .imag img {
     width: 100%;
   }
+
+}
+.contact .send{
+  background-color: var(--main-color) !important;
+}
+.contact .send:hover{
+  color: white;
 }
